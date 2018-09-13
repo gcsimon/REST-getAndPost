@@ -36,9 +36,11 @@ public class Application {
 							for(Todos t: todos)
 								log.info(t.toString());		
 
-							aux = todos.get(5);
+							aux = new Todos();
+							aux.settitle("ESTA FUNCIONANDO O POST CARAII");
 							aux.setid(1224);
 							aux.setuserId(1542);
+							aux.setcompleted(true);
 						    todos2 = restTemplate.postForObject("https://jsonplaceholder.typicode.com/todos",aux , Todos.class);
 							log.info("\n\npost: \n"+ todos2.toString());			
 							
